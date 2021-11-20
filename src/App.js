@@ -7,8 +7,8 @@ import { auth } from "./firebase";
 import Header from "./Header";
 // import Login from "./Login";
 import Sidebar from "./Sidebar";
-// import { Widgets } from "./Widgets";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Widgets from "./Widgets";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const user = useSelector(selectUser);
@@ -38,11 +38,13 @@ function App() {
     <div className="app">
       {/* {!user ? (
           <Login />
+          
         ) : ( */}
+      <Header />
       <div className="app_body">
         {/* <Switch>
             <Route exact path="/home"> */}
-        <Header />
+
         <Sidebar />
         <Feed />
         {/* <Widgets /> */}
